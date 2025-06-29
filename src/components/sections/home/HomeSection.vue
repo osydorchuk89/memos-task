@@ -13,7 +13,11 @@ onMounted(() => {
 </script>
 
 <template>
-    <section id="home" class="home-container bg-section-base section-centered">
+    <section
+        id="home"
+        class="home-container bg-section-base section-centered"
+        :style="{ backgroundImage: `url(${homeImageUrl})` }"
+    >
         <HomeNavBar />
         <HomeCarousel />
         <BaseButton
@@ -24,8 +28,4 @@ onMounted(() => {
     </section>
 </template>
 
-<style scoped>
-.home-container {
-    background-image: url("../../../assets/images/home-image.webp");
-}
-</style>
+<style scoped></style>
