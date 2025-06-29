@@ -25,7 +25,7 @@ import BaseButton from "@/components/ui/BaseButton.vue";
 <style scoped>
 .action-container {
     gap: 60px;
-    background-image: url("../../../assets/images/action-image.jpg");
+    background-image: url("../../../assets/images/action-image.webp");
 }
 
 .action-text {

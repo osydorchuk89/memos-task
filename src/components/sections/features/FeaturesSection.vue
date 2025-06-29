@@ -16,7 +16,7 @@ import FeaturesCarousel from "./FeaturesCarousel.vue";
     justify-content: space-between;
     align-items: center;
     gap: 64px;
-    background-image: url("../../../assets/images/features-image.jpg");
+    background-image: url("../../../assets/images/features-image.webp");
 }
 
 img {

@@ -18,6 +18,6 @@ import HomeNavBar from "./HomeNavBar.vue";
 
 <style scoped>
 .home-container {
-    background-image: url("../../../assets/images/home-image.jpg");
+    background-image: url("../../../assets/images/home-image.webp");
 }
 </style>

@@ -10,7 +10,10 @@ const { modalOpen, openModal, closeModal } = useModal();
 </script>
 
 <template>
-    <section id="contact" class="contact-container bg-section-base section-padding section-centered">
+    <section
+        id="contact"
+        class="contact-container bg-section-base section-padding section-centered"
+    >
         <div class="contact-content">
             <div class="text-main">
                 <h2 class="text-title">Let's Keep in Touch</h2>
@@ -39,7 +42,7 @@ const { modalOpen, openModal, closeModal } = useModal();
     gap: 90px;
     padding-top: 60px;
     padding-bottom: 60px;
-    background-image: url("../../../assets/images/contact-image.jpg");
+    background-image: url("../../../assets/images/contact-image.webp");
 }
 
 .contact-content {
