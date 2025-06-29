@@ -11,7 +11,11 @@ const emit = defineEmits<{
 
 const schema = yup.object({
     name: yup.string().required("Name is required"),
-    budget: yup.number().min(1, "Please enter a valid number").required("Budget is required"),
+    budget: yup
+        .number()
+        .typeError("Please enter a valid number")
+        .min(0, "Please enter a valid number")
+        .required("Budget is required"),
     email: yup.string().email("Please enter a valid email").required("Email is required"),
     message: yup.string().required("Message is required"),
 });

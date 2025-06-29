@@ -1,7 +1,15 @@
 <script setup lang="ts">
+import { onMounted } from "vue";
+
 import HomeCarousel from "./HomeCarousel.vue";
 import BaseButton from "@/components/ui/BaseButton.vue";
 import HomeNavBar from "./HomeNavBar.vue";
+import homeImageUrl from "../../../assets/images/home-image.webp";
+
+onMounted(() => {
+    const img = new Image();
+    img.src = homeImageUrl;
+});
 </script>
 
 <template>
