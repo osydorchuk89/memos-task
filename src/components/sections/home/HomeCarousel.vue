@@ -8,7 +8,7 @@ const { currentIndex, currentItem, goToPrevious, goToNext, goToSpecific, isAtSta
 </script>
 
 <template>
-    <div class="carousel-container">
+    <article class="carousel-container">
         <div class="carousel-content">
             <FontAwesomeIcon
                 :icon="['fas', 'angle-left']"
@@ -18,8 +18,8 @@ const { currentIndex, currentItem, goToPrevious, goToNext, goToSpecific, isAtSta
             />
             <Transition name="slide" mode="out-in">
                 <div :key="currentIndex" class="carousel-text">
-                    <p class="text-title">{{ currentItem.title }}</p>
-                    <p class="text-message">{{ currentItem.message }}</p>
+                    <h3 class="text-title">{{ currentItem.title }}</h3>
+                    <h2 class="text-message">{{ currentItem.message }}</h2>
                     <p class="text-description">{{ currentItem.description }}</p>
                 </div>
             </Transition>
@@ -39,7 +39,7 @@ const { currentIndex, currentItem, goToPrevious, goToNext, goToSpecific, isAtSta
                 />
             </li>
         </ul>
-    </div>
+    </article>
 </template>
 
 <style scoped>

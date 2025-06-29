@@ -3,11 +3,13 @@ import { headerLinks } from "@/data";
 </script>
 
 <template>
-    <ul class="navbar-menu">
-        <li v-for="link in headerLinks" :key="link.name">
-            <a class="navbar-link" :href="link.to">{{ link.name }}</a>
-        </li>
-    </ul>
+    <header>
+        <ul class="navbar-menu">
+            <li v-for="link in headerLinks" :key="link.name">
+                <a class="navbar-link" :href="link.to">{{ link.name }}</a>
+            </li>
+        </ul>
+    </header>
 </template>
 
 <style scoped>
@@ -16,9 +18,11 @@ import { headerLinks } from "@/data";
 }
 
 @media (min-width: 1024px) {
-    .navbar-menu {
+    header {
         position: absolute;
         top: 60px;
+    }
+    .navbar-menu {
         display: flex;
         flex-direction: row;
         gap: 40px;

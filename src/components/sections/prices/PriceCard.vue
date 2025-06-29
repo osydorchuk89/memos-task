@@ -16,8 +16,8 @@ const emit = defineEmits<{
 </script>
 
 <template>
-    <div class="card-container">
-        <p class="card-title">{{ title }}</p>
+    <article class="card-container">
+        <h2 class="card-title">{{ title }}</h2>
         <p class="card-price">{{ price }} <span class="card-currency">$</span></p>
         <ul class="card-features">
             <li v-for="(item, index) in priceCardItems" :key="item" class="card-feature">
@@ -37,7 +37,7 @@ const emit = defineEmits<{
             :borderStyle="priority ? 'none' : '2px solid #ffffff50'"
             @click="emit('success')"
         />
-    </div>
+    </article>
 </template>
 
 <style scoped>

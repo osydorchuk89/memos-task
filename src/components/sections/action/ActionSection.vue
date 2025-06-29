@@ -3,9 +3,9 @@ import BaseButton from "@/components/ui/BaseButton.vue";
 </script>
 
 <template>
-    <div id="action" class="action-container bg-section-base section-padding section-centered">
+    <section id="action" class="action-container bg-section-base section-padding section-centered">
         <div class="action-text">
-            <p class="action-title">Easy to setup. <br />Easy to maintain</p>
+            <h2 class="action-title">Easy to setup. <br />Easy to maintain</h2>
             <p class="action-description">
                 Bootstrap is a widely-used, sleek, intuitive and powerful front-end framework for
                 faster and easier web development.
@@ -19,7 +19,7 @@ import BaseButton from "@/components/ui/BaseButton.vue";
                 active-color="var(--primary-active)"
             />
         </div>
-    </div>
+    </section>
 </template>
 
 <style scoped>

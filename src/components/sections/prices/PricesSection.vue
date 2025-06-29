@@ -8,9 +8,9 @@ const { modalOpen, openModal, closeModal } = useModal();
 </script>
 
 <template>
-    <div id="prices" class="prices-container section-padding section-centered">
+    <section id="prices" class="prices-container section-padding section-centered">
         <div class="prices-text">
-            <p class="prices-title">Plans & Pricing</p>
+            <h2 class="prices-title">Plans & Pricing</h2>
             <p class="prices-description">
                 Startup Framework is free forever — you only pay for custom domain hosting or to
                 export your site.
@@ -34,7 +34,7 @@ const { modalOpen, openModal, closeModal } = useModal();
                 hours.
             </p>
         </BaseModal>
-    </div>
+    </section>
 </template>
 
 <style scoped>
@@ -80,7 +80,6 @@ const { modalOpen, openModal, closeModal } = useModal();
 }
 
 @media (min-width: 1024px) {
-
     .cards-container {
         flex-direction: row;
         max-width: 100%;

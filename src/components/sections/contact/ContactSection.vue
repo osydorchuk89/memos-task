@@ -10,28 +10,28 @@ const { modalOpen, openModal, closeModal } = useModal();
 </script>
 
 <template>
-    <div id="contact" class="contact-container bg-section-base section-padding section-centered">
+    <section id="contact" class="contact-container bg-section-base section-padding section-centered">
         <div class="contact-content">
             <div class="text-main">
-                <p class="text-title">Let's Keep in Touch</p>
+                <h2 class="text-title">Let's Keep in Touch</h2>
                 <p class="text-description">
                     We have created a new product that will help designers, developers and companies
                     create websites for their startups quickly and easily.
                 </p>
             </div>
-            <ul class="text-contacts">
+            <address class="text-contacts">
                 <div v-for="item in contactItems" :key="item.text" class="contact-item">
                     <FontAwesomeIcon :icon="['fas', item.icon]" class="contact-icon" />
                     <p class="contact-text">{{ item.text }}</p>
                 </div>
-            </ul>
+            </address>
         </div>
         <ContactForm @success="openModal" />
         <BaseModal v-if="modalOpen" :onClose="closeModal">
             <h2>Request Sent Succesfully</h2>
             <p>Thank you for reaching out us. <br />We will contact you back within 72 hours.</p>
         </BaseModal>
-    </div>
+    </section>
 </template>
 
 <style scoped>

@@ -3,9 +3,9 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 </script>
 
 <template>
-    <div class="footer-container section-padding">
+    <footer class="footer-container section-padding">
         <div class="footer-upper">
-            <p class="footer-title">Startup 3</p>
+            <h2 class="footer-title">Startup 3</h2>
             <ul class="footer-links">
                 <div class="footer-links-part">
                     <li class="link-text">Privacy Policy</li>
@@ -29,7 +29,7 @@ import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
             </ul>
             <p class="link-disclaimer">© 2025. All rights reserved.</p>
         </div>
-    </div>
+    </footer>
 </template>
 
 <style scoped>

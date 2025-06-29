@@ -3,10 +3,10 @@ import FeaturesCarousel from "./FeaturesCarousel.vue";
 </script>
 
 <template>
-    <div id="features" class="features-container bg-section-base section-padding">
-        <img src="../../../assets/images/laptop-mockup.png" alt="laptop image" />
+    <section id="features" class="features-container bg-section-base section-padding">
+        <img src="../../../assets/images/laptop-mockup.png" alt="laptop image" loading="lazy" />
         <FeaturesCarousel />
-    </div>
+    </section>
 </template>
 
 <style scoped>

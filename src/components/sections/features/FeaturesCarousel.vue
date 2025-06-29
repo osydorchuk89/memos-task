@@ -7,12 +7,12 @@ const { currentIndex, currentItem, goToSpecific } = useCarousel(featuresItems);
 </script>
 
 <template>
-    <div class="carousel-container">
+    <article class="carousel-container">
         <div class="carousel-content">
             <Transition name="slide" mode="out-in">
                 <div :key="currentIndex" class="carousel-item">
                     <div class="carousel-text">
-                        <p class="text-title">{{ currentItem.title }}</p>
+                        <h2 class="text-title">{{ currentItem.title }}</h2>
                         <p class="text-description">{{ currentItem.description }}</p>
                     </div>
                     <div class="carousel-features">
@@ -22,7 +22,7 @@ const { currentIndex, currentItem, goToSpecific } = useCarousel(featuresItems);
                             class="carousel-feature"
                         >
                             <FontAwesomeIcon :icon="['far', feature.icon]" class="feature-icon" />
-                            <p class="feature-title">{{ feature.title }}</p>
+                            <h3 class="feature-title">{{ feature.title }}</h3>
                             <p class="feature-description">
                                 {{ feature.description }}
                             </p>
@@ -40,7 +40,7 @@ const { currentIndex, currentItem, goToSpecific } = useCarousel(featuresItems);
                 />
             </li>
         </ul>
-    </div>
+    </article>
 </template>
 
 <style scoped>
@@ -57,7 +57,8 @@ const { currentIndex, currentItem, goToSpecific } = useCarousel(featuresItems);
     overflow: hidden;
 }
 
-.carousel-item, .carousel-text {
+.carousel-item,
+.carousel-text {
     display: flex;
     flex-direction: column;
     gap: 20px;

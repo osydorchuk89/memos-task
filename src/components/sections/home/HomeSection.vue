@@ -5,7 +5,7 @@ import HomeNavBar from "./HomeNavBar.vue";
 </script>
 
 <template>
-    <div id="home" class="home-container bg-section-base section-centered">
+    <section id="home" class="home-container bg-section-base section-centered">
         <HomeNavBar />
         <HomeCarousel />
         <BaseButton
@@ -13,7 +13,7 @@ import HomeNavBar from "./HomeNavBar.vue";
             main-color="var(--secondary)"
             active-color="var(--secondary-active)"
         />
-    </div>
+    </section>
 </template>
 
 <style scoped>
