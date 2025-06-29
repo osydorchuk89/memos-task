@@ -88,6 +88,7 @@ const { modalOpen, openModal, closeModal } = useModal();
 .contact-icon,
 .modal-text {
     font-size: 16px;
+    font-style: normal;
 }
 
 .modal-title,

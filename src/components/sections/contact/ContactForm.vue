@@ -125,7 +125,6 @@ const onSubmit = handleSubmit(
     width: 100%;
 }
 
-.contact-form span,
 label {
     color: var(--dark-text);
 }
@@ -200,6 +199,5 @@ label {
     .contact-form {
         padding: 40px;
     }
-
 }
 </style>
