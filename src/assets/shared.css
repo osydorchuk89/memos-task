@@ -1,0 +1,47 @@
+/* shared styles for sections */
+.bg-section-base {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-section-base::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--accent-opaque);
+    z-index: 1;
+}
+
+.bg-section-base > * {
+    z-index: 2;
+}
+
+.section-padding {
+    padding: 0 16px;
+}
+
+@media (min-width: 640px) {
+    .section-padding {
+        padding: 0 60px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section-padding {
+        padding: 0 90px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .section-padding {
+        padding: 0 120px;
+    }
+}
+
+.section-centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
