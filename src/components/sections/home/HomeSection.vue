@@ -4,20 +4,15 @@ import { onMounted } from "vue";
 import HomeCarousel from "./HomeCarousel.vue";
 import BaseButton from "@/components/ui/BaseButton.vue";
 import HomeNavBar from "./HomeNavBar.vue";
-import homeImageUrl from "../../../assets/images/home-image.webp";
 
 onMounted(() => {
     const img = new Image();
-    img.src = homeImageUrl;
+    img.src = "../../../assets/images/home-image.webp";
 });
 </script>
 
 <template>
-    <section
-        id="home"
-        class="home-container bg-section-base section-centered"
-        :style="{ backgroundImage: `url(${homeImageUrl})` }"
-    >
+    <section id="home" class="home-container bg-section-base section-centered">
         <HomeNavBar />
         <HomeCarousel />
         <BaseButton
@@ -28,4 +23,8 @@ onMounted(() => {
     </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+.home-container {
+    background-image: url("../../../assets/images/home-image.webp");
+}
+</style>
