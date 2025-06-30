@@ -8,19 +8,57 @@ import TheFooter from "./components/sections/footer/TheFooter.vue";
 import HomeSection from "./components/sections/home/HomeSection.vue";
 import PricesSection from "./components/sections/prices/PricesSection.vue";
 import homeImageUrl from "./assets/images/home-image.webp";
+import featuresImageUrl from "./assets/images/features-image.webp";
+import actionImageUrl from "./assets/images/action-image.webp";
+import contactImageUrl from "./assets/images/contact-image.webp";
 
-const imageLoaded = ref(false);
-onMounted(() => {
-    const img = new Image();
-    img.onload = () => {
-        imageLoaded.value = true;
+const imagesLoaded = ref(false);
+const fontsLoaded = ref(false);
+const allAssetsReady = ref(false);
+
+const checkAllAssetsReady = () => {
+    if (imagesLoaded.value && fontsLoaded.value) {
+        allAssetsReady.value = true;
+    }
+};
+
+onMounted(async () => {
+    // load background images
+    const imageUrls = [homeImageUrl, featuresImageUrl, actionImageUrl, contactImageUrl];
+    
+    const loadImage = (url: string): Promise<string> => {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = () => resolve(url);
+            img.onerror = () => reject(new Error(`Failed to load ${url}`));
+            img.src = url;
+        });
     };
-    img.src = homeImageUrl;
+
+    try {
+        await Promise.all(imageUrls.map((url) => loadImage(url)));
+        imagesLoaded.value = true;
+        checkAllAssetsReady();
+    } catch (error) {
+        console.error("Some images failed to load:", error);
+        imagesLoaded.value = true;
+        checkAllAssetsReady();
+    }
+
+    // load fonts
+    try {
+        await document.fonts.ready;
+        fontsLoaded.value = true;
+        checkAllAssetsReady();
+    } catch (error) {
+        fontsLoaded.value = true;
+        checkAllAssetsReady();
+    }
 });
 </script>
 
 <template>
-    <main v-if="imageLoaded" class="scroll-container">
+    <main v-if="allAssetsReady" class="scroll-container">
         <HomeSection class="scroll-section" />
         <FeaturesSection class="scroll-section" />
         <ActionSection class="scroll-section" />
